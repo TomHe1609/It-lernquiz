@@ -1,4 +1,4 @@
-const CACHE = 'it-lernquiz-offline-v6-course-20261010';
+const CACHE = 'it-lernquiz-offline-v6-1-unlimited-module-20261010';
 const APP_SHELL = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './apple-touch-icon.png'];
 self.addEventListener('install', event => {
  event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(APP_SHELL)).then(() => self.skipWaiting()));

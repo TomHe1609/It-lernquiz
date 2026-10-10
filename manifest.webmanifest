@@ -1,7 +1,7 @@
 {
   "name": "IT Lernquiz – Berufsspezialist Softwareentwicklung",
   "short_name": "IT Lernquiz",
-  "description": "Neue Fragen aus 34 Kurslektionen und 521 ausgelesenen Lernkarten – auch offline.",
+  "description": "Unbegrenzt pro Modul lernen: einfache Kursfragen und 521 ausgelesene Lernkarten – auch offline.",
   "lang": "de-DE",
   "start_url": "./",
   "scope": "./",
