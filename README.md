@@ -1,45 +1,67 @@
-# It-lernquiz
+# IT-Lernquiz für den aktuellen Lehrgang
 
-Mobile, installierbare Lern-App für die Weiterbildung zum Berufsspezialisten Softwareentwicklung.
+Mobile PWA zur Weiterbildung zum Berufsspezialisten Softwareentwicklung: **10 Kursmodule, 34 Lerneinheiten und 475 Fragen mit Lösungen, Erklärungen und Hinweisen**.
 
-- 25 unveränderte Lernkapitel und **375 Single-Choice-Fragen**, jeweils 15 pro Kapitel.
-- 100 ursprüngliche Fragen plus 275 neue Fragen mit Lösung, Erklärung und Hinweis.
-- Grundlagen, praktische Entscheidungen, Fehleranalyse und Prüfungsvorbereitung.
-- Kapiteltraining, Wissenmix, neue Fragen, Fehlerwiederholung und 20-Fragen-Prüfungssimulation mit anschließender Auswertung.
-- Offline-Nutzung nach dem ersten erfolgreichen Laden; Fortschritt und Einstellungen bleiben lokal auf dem jeweiligen Gerät.
+Die Gliederung und sichtbaren Unterrichtsminuten folgen den sechs bereitgestellten Kursübersichten. Module 4–9 waren nur als Überschriften sichtbar; ihre ergänzenden Lerntexte orientieren sich an den offiziellen Qualifikationsschwerpunkten. Der ausgearbeitete Betrieb „Mittelland Logistik“ ist ausdrücklich eine eigene fiktive Übungsfallstudie. Die App ersetzt keine Originalkursunterlagen oder offiziellen Prüfungsaufgaben.
 
-## Kompatibilität und Aktualisierung
+| Modul | Schwerpunkt | Einheiten |
+| --- | --- | ---: |
+| 0 | Prüfungs-Kickoff | 1 |
+| 1 | Lern- und Arbeitsmethodik | 3 |
+| 2 | Analysieren und Planen der Softwarearchitektur | 13 |
+| 3 | Entwickeln von Softwarearchitekturen | 11 |
+| 4 | Produktqualität | 1 |
+| 5 | Software- und Anwenderdokumentation | 1 |
+| 6 | Übergabe und Einführung | 1 |
+| 7 | Evaluation und kontinuierliche Verbesserung | 1 |
+| 8 | Organisatorische und rechtliche Vorgaben | 1 |
+| 9 | Projektunterstützung und Koordination | 1 |
 
-Die bisherigen Fragen `q001` bis `q100`, ihre Antworten und alle Lerntexte bleiben unverändert. Neue IDs haben das Format `ch01-extra-01`. Der Speicherschlüssel `bssw_quiz_v1` und das Export-/Importformat mit `version: 1` bleiben erhalten. Bestehende Antworten und Einstellungen werden nicht zurückgesetzt.
+Alle Einheiten enthalten Lernziele, fachliche Erläuterungen, ein Praxisbeispiel und einen offenen Selbstcheck mit möglicher Lösung. Ergänzungen betreffen insbesondere Anforderungsgespräche, Kundenbedarf, arc42, Plattformwahl, SOLID, TDD, UML und Entwurfsmuster. 100 neue Fragen ergänzen die 375 bestehenden; die Verteilung richtet sich nach Themenumfang und vorhandenen Aufgaben (5–26 Fragen je Einheit).
 
-Die Fortschrittsanzeigen und Kapitel-Filter verwenden die tatsächliche Fragenzahl. Vier bereits bearbeitete Fragen eines Kapitels zählen nach der Erweiterung als **4 von 15**. Ein kleinerer Prozentwert bedeutet daher keinen Verlust von Antworten.
+## Funktionen und vorhandene Inhalte
 
-Der Service Worker verwendet `it-lernquiz-offline-v2-375`, lädt den vollständigen App-Shell einschließlich der eingebetteten Fragen und entfernt beim Aktivieren alte App-Caches. Beim nächsten Online-Aufruf wird die Aktualisierung geladen; gegebenenfalls die App anschließend erneut öffnen. Ein laufender Quizdurchgang wird nicht durch einen erzwungenen Seitenreload unterbrochen. Lernfortschritt im localStorage ist vom Cache unabhängig.
+- Themenquiz mit allen Fragen einer Einheit und sofortigen Erklärungen.
+- Training eines ganzen Moduls, Wissenmix, neue Fragen und Fehlerwiederholung.
+- Prüfungssimulation mit 20 Fragen: je 2–3 Fragen aus allen acht Fachmodulen 2–9; Rückmeldung erst am Ende. Kickoff und Lernmethodik bleiben im normalen Training verfügbar.
+- Alle bisherigen 25 Lerntexte bleiben unverändert in „Grundlagen und Vorlagen“ und als passende Vertiefung im neuen Lernheft verfügbar.
+- Alle bisherigen 375 Fragen behalten IDs, Texte, Optionen, Lösungen und Erklärungen. Nur die Zuordnung zur neuen Kursgliederung ändert sich.
+- Offline-Nutzung, PWA-Installation, Auswertung, Schriftgröße und Farbschema bleiben erhalten.
 
-## Fachliche Orientierung
+Die tatsächliche schriftliche Prüfung nutzt situationsbezogene Aufgaben. Der Quizmodus ergänzt die Vorbereitung; freie Selbstchecks trainieren zusätzlich das Begründen und Bewerten.
 
-Die neuen Fragen sind Lernaufgaben, keine offiziellen Prüfungsaufgaben. Die Quiz-Prüfungssimulation bleibt ein Lernmodus; die tatsächliche Prüfung umfasst situationsbezogene Aufgaben sowie Präsentation und Fachgespräch.
+## Fortschritt und Browserwechsel
 
-Primärquellen zur Prüfung und Weiterarbeit (geprüft am 10.10.2026):
+Der Speicherschlüssel `bssw_quiz_v1` und das Exportformat `version: 1` bleiben erhalten. Bereits beantwortete Fragen werden anhand ihrer stabilen IDs den passenden neuen Einheiten zugeordnet. **15 bisher beantwortete Fragen zählen weiter als 15, jetzt von insgesamt 475.** Der Prozentwert kann sich dadurch verringern. Kurs-Abschlussmarkierungen aus den Bildern werden nicht als Quizantworten übernommen.
 
-- [SEFPrV: schriftliche Prüfung, § 6](https://www.gesetze-im-internet.de/sefprv/__6.html) und [mündliche Prüfung, § 7](https://www.gesetze-im-internet.de/sefprv/__7.html).
-- [Offizieller Scrum Guide](https://scrumguides.org/download.html) für Verantwortlichkeiten, Events und Definition of Done.
-- [BSI-Standard 200-4](https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/BSI_Standards/standard_200_4.pdf?__blob=publicationFile&v=8) für Business Continuity Management.
-- [W3C WCAG Quick Reference](https://www.w3.org/WAI/WCAG22/quickref/) für Barrierefreiheit.
-- [DSGVO, amtliche EU-Veröffentlichung](https://eur-lex.europa.eu/eli/reg/2016/679/oj/deu) insbesondere Artikel 5 und 25.
-- [OWASP Password Storage Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html) für Passwortspeicherung.
-- [PostgreSQL: Transaktionsisolation](https://www.postgresql.org/docs/current/transaction-iso.html) für Transaktionen und konkurrierende Zugriffe; konkrete Details sind produktspezifisch.
-- [MDN Service Worker API](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API) für Offline-Cache und Aktualisierung.
-- [HTTP-Semantik, RFC 9110](https://www.rfc-editor.org/rfc/rfc9110) als weiterführende Protokollreferenz.
+Lokale Browserspeicher werden nicht automatisch zwischen Browsern geteilt. Unter **Fortschritt → Fortschritt verwalten → Fortschritt sichern** den Stand als JSON-Datei speichern; im anderen Browser mit **Fortschritt importieren** übernehmen. Der Import ersetzt nach Bestätigung den dort vorhandenen Stand. Es gibt keine Anmeldung oder Online-Synchronisierung.
 
-## Überprüfung
+## Offline-Aktualisierung
 
-Die App benötigt weiterhin keinen Build und keine externen Laufzeitbibliotheken. Für den optionalen Browsertest Node.js und Playwright in einer separaten Testumgebung bereitstellen, beispielsweise mit `npm install --no-save playwright` und `npx playwright install chromium`. Anschließend:
+Der Service Worker verwendet `it-lernquiz-offline-v3-course`. Lerntexte und Fragen sind in `index.html` eingebettet und benötigen keine zusätzlichen Netzabfragen. Bei Aktivierung werden ältere App-Caches entfernt; der separate lokale Lernstand bleibt bestehen. Beim nächsten Online-Aufruf wird die neue Version geladen. Gegebenenfalls die App danach erneut öffnen. Ein laufendes Quiz wird nicht durch einen erzwungenen Reload unterbrochen.
+
+## Inhalte bearbeiten und prüfen
+
+Die veröffentlichte App läuft ohne externe Bibliotheken oder Build-Schritt im Browser. Für die redaktionelle Erstellung genügt Node.js:
 
 ```text
+node build-course.cjs
 node tests/verify.cjs
 ```
 
-Optional bestimmt `BROWSER_EXECUTABLE` den Pfad eines installierten Chromium-Browsers. `TEST_BASE_REF` bezeichnet die ursprüngliche Version (Standard: `db53955`; die Git-Historie muss verfügbar sein). `SCREENSHOT_DIR` und `REPORT_FILE` speichern optional Ansichten und Prüfergebnisse.
+`content/course.cjs` enthält Gliederung und Lerntexte, `course-questions.txt` die neuen Fragen, `question-routing.cjs` die Zuordnung vorhandener Fragen und `course-ui.js` die Kursansicht. `original-data.json` bewahrt den Ausgangsbestand. Der Builder erzeugt den eingebetteten Datenbestand und ist wiederholbar.
 
-Der Test prüft Erhalt der Lerntexte und ursprünglichen Fragen, eindeutige IDs und Fragetexte, 15 Fragen je Kapitel, alle 375 Lösungsanzeigen, Trainingsmodi und Auswertung, vollständigen Fortschritt, alte Exporte, Mobil- und Querformatansichten, Offline-Beantwortung sowie ein echtes Upgrade des ursprünglichen Service Workers mit erhaltenem Lernstand. Er ersetzt keine unabhängige fachliche Begutachtung oder einen Test auf einem physischen iPhone.
+Der Test prüft alle 475 Lösungen und Ergebnisanzeigen in einer isolierten JavaScript-Umgebung, den unveränderten Originalbestand, den Erhalt eines alten Lernstands mit 15 Antworten, sämtliche Themen- und Modultrainings, Filter, 100 ausgewogene Prüfungsdurchgänge, Export und Import einschließlich Abbruch, Cache-Lebenszyklus, Offline-Fallback und reproduzierbare Erstellung. Sichtbare Browser- und Mobilprüfungen werden getrennt durchgeführt. Diese Prüfungen sind keine unabhängige fachliche Begutachtung und kein Test auf einem physischen iPhone.
+
+## Primärquellen
+
+Prüfung und fachliche Orientierung, geprüft am 10.10.2026:
+
+- [Qualifikationsschwerpunkte, § 4 SEFPrV](https://www.gesetze-im-internet.de/sefprv/__4.html), [schriftliche Prüfung, § 6](https://www.gesetze-im-internet.de/sefprv/__6.html) und [mündliche Prüfung, § 7](https://www.gesetze-im-internet.de/sefprv/__7.html).
+- [arc42: offizielle Strukturübersicht](https://arc42.org/overview/).
+- [Agile Alliance: Test Driven Development](https://agilealliance.org/glossary/tdd/).
+- [OWASP Application Security Verification Standard](https://owasp.org/projects/asvs).
+- [Offizieller Scrum Guide](https://scrumguides.org/download.html).
+- [DSGVO: amtliche EU-Veröffentlichung](https://eur-lex.europa.eu/eli/reg/2016/679/oj/deu).
+- [W3C WCAG Quick Reference](https://www.w3.org/WAI/WCAG22/quickref/).
+- [HTTP-Semantik: RFC 9110](https://www.rfc-editor.org/rfc/rfc9110).
